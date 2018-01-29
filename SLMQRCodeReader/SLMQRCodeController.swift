@@ -151,8 +151,6 @@ class SLMQRCodeController: UIViewController,UINavigationControllerDelegate,AVCap
       () -> Void in
     })
   }
-
-  
   
   @objc func openLibrary() -> Void {
   
