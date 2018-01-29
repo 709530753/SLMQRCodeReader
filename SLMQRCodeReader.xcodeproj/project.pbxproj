@@ -17,6 +17,8 @@
 		904298AC201ED90100A9D035 /* SLMQRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90429887201ED3A900A9D035 /* SLMQRCodeReader.framework */; };
 		904298AD201ED90100A9D035 /* SLMQRCodeReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90429887201ED3A900A9D035 /* SLMQRCodeReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		904298B2201EE06000A9D035 /* SLMQRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904298B1201EE06000A9D035 /* SLMQRCodeReader.swift */; };
+		904298C0201F140C00A9D035 /* SLMQRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904298BF201F140B00A9D035 /* SLMQRCodeReader.framework */; };
+		904298CB201F17F200A9D035 /* SLMFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904298CA201F17F200A9D035 /* SLMFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		904298A4201ED42800A9D035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		904298AA201ED50900A9D035 /* SLMQRCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLMQRCodeController.swift; sourceTree = "<group>"; };
 		904298B1201EE06000A9D035 /* SLMQRCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLMQRCodeReader.swift; sourceTree = "<group>"; };
+		904298BF201F140B00A9D035 /* SLMQRCodeReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SLMQRCodeReader.framework; path = ../../../../Desktop/QRCodeReader.swift/Example/Carthage/Build/iOS/SLMQRCodeReader.framework; sourceTree = "<group>"; };
+		904298CA201F17F200A9D035 /* SLMFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLMFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				904298C0201F140C00A9D035 /* SLMQRCodeReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,7 @@
 				90429889201ED3A900A9D035 /* SLMQRCodeReader */,
 				90429897201ED42800A9D035 /* SLMQRCodeReaderApp */,
 				90429888201ED3A900A9D035 /* Products */,
+				904298BE201F140B00A9D035 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				904298B1201EE06000A9D035 /* SLMQRCodeReader.swift */,
+				904298CA201F17F200A9D035 /* SLMFactory.swift */,
 				904298AA201ED50900A9D035 /* SLMQRCodeController.swift */,
 				9042988A201ED3A900A9D035 /* SLMQRCodeReader.h */,
 				9042988B201ED3A900A9D035 /* Info.plist */,
@@ -117,6 +124,14 @@
 				904298A4201ED42800A9D035 /* Info.plist */,
 			);
 			path = SLMQRCodeReaderApp;
+			sourceTree = "<group>";
+		};
+		904298BE201F140B00A9D035 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				904298BF201F140B00A9D035 /* SLMQRCodeReader.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				904298CB201F17F200A9D035 /* SLMFactory.swift in Sources */,
 				904298AB201ED50900A9D035 /* SLMQRCodeController.swift in Sources */,
 				904298B2201EE06000A9D035 /* SLMQRCodeReader.swift in Sources */,
 			);

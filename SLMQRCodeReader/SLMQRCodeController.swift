@@ -18,8 +18,8 @@ class SLMQRCodeController: UIViewController,UINavigationControllerDelegate,AVCap
   private var output: AVCaptureMetadataOutput!
   private var session: AVCaptureSession!
   private var preview: AVCaptureVideoPreviewLayer!
-  private let ScreenWidth = UIScreen.main.bounds.size.width
-  private let ScreenHeight = UIScreen.main.bounds.size.height
+  private let ScreenWidth:CGFloat = UIScreen.main.bounds.size.width
+  private let ScreenHeight:CGFloat = UIScreen.main.bounds.size.height
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,20 +30,38 @@ class SLMQRCodeController: UIViewController,UINavigationControllerDelegate,AVCap
   //创建UI
   func setupUI() -> Void {
     
-    let btn = UIButton(type:UIButtonType.custom)
-    btn.frame = CGRect.init(x: 10, y: 10, width: 80, height: 40)
-    btn.setTitle("cancel", for: UIControlState.normal)
-    btn.setTitleColor(UIColor.white, for: UIControlState.normal)
-    self.view.addSubview(btn)
-    btn.addTarget(self, action: #selector(back), for: UIControlEvents.touchUpInside)
+    let factory = SLMFactory()
+    _ = factory.createBtn(context: self,
+                            frame: CGRect.init(x: 10, y: 10, width: 80, height: 40),
+                            title: "cancel",
+                           action:  #selector(back))
     
-    let photoLibrary = UIButton(type:UIButtonType.custom)
-    photoLibrary.frame = CGRect.init(x: ScreenWidth - 100, y: 10, width: 80, height: 40)
-    photoLibrary.setTitle("library", for: UIControlState.normal)
-    photoLibrary.setTitleColor(UIColor.white, for: UIControlState.normal)
-    self.view.addSubview(photoLibrary)
-    photoLibrary.addTarget(self, action: #selector(openLibrary), for: UIControlEvents.touchUpInside)
+    _ = factory.createBtn(context: self,
+                            frame: CGRect.init(x: ScreenWidth - 100, y: 10, width: 80, height: 40),
+                            title: "library",
+                           action: #selector(openLibrary))
     
+    let leftSpacing:CGFloat = 80.0;
+    let centerViewWith:CGFloat = ScreenWidth - leftSpacing * 2;
+    factory.createBezierPath(context: self,
+                           movePoint: CGPoint(x: leftSpacing , y: ScreenHeight/2  - (centerViewWith/2 - 50)),
+                         centerPoint: CGPoint(x: leftSpacing , y: ScreenHeight/2 - centerViewWith/2),
+                            endPoint: CGPoint(x: leftSpacing + 50, y: ScreenHeight/2 - centerViewWith/2))
+    
+    factory.createBezierPath(context: self,
+                           movePoint: CGPoint(x: leftSpacing + centerViewWith - 50, y: ScreenHeight/2 - centerViewWith/2),
+                         centerPoint: CGPoint(x: leftSpacing + centerViewWith, y: ScreenHeight/2 - centerViewWith/2),
+                            endPoint: CGPoint(x: leftSpacing + centerViewWith , y: ScreenHeight/2 - centerViewWith/2 + 50))
+    
+    factory.createBezierPath(context: self,
+                           movePoint: CGPoint(x: leftSpacing , y: ScreenHeight/2 + (centerViewWith/2 - 50)),
+                         centerPoint: CGPoint(x: leftSpacing , y: ScreenHeight/2 + centerViewWith/2),
+                            endPoint: CGPoint(x: leftSpacing + 50, y: ScreenHeight/2 + centerViewWith/2))
+    
+    factory.createBezierPath(context: self,
+                           movePoint: CGPoint(x: leftSpacing + centerViewWith - 50, y: ScreenHeight/2 + centerViewWith/2),
+                         centerPoint: CGPoint(x: leftSpacing + centerViewWith , y: ScreenHeight/2 + centerViewWith/2),
+                            endPoint: CGPoint(x: leftSpacing + centerViewWith , y: ScreenHeight/2 + centerViewWith/2 - 50))
     
   }
   
