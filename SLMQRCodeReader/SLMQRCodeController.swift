@@ -190,7 +190,7 @@ class SLMQRCodeController: UIViewController,
     if redViewY == (ScreenHeight - (ScreenWidth - 80 * 2))/2 - 4 {
       self.minutes = 1
     } else {
-      self.redView.frame = CGRect.init(x: 80, y: (ScreenHeight - (ScreenWidth - 80 * 2))/2 + redViewY, width:  (ScreenWidth - 80 * 2), height: 2)        
+      self.redView.frame = CGRect.init(x: 80, y: (ScreenHeight - (ScreenWidth - 80 * 2))/2 + redViewY, width:  (ScreenWidth - 80 * 2), height: 2)
     }
   }
   
