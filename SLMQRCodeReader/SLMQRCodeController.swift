@@ -15,7 +15,11 @@ class SLMQRCodeController: UIViewController,
             UIImagePickerControllerDelegate {
 
   var slmQRContent: ((_ content: String) ->Void)?
-
+  var timer:Timer?
+  var minutes:Int = 1;
+  var redView:UIView!
+  
+  
   private var device: AVCaptureDevice!
   private var input: AVCaptureInput!
   private var output: AVCaptureMetadataOutput!
@@ -28,6 +32,9 @@ class SLMQRCodeController: UIViewController,
     super.viewDidLoad()
     initDevice()
     setupUI()
+    
+    timer = Timer.init(timeInterval: 0.01, target: self, selector: #selector(timerFired), userInfo: nil, repeats: true)
+    RunLoop.current.add(timer!, forMode: RunLoopMode.defaultRunLoopMode)
   }
   
   //创建UI
@@ -65,7 +72,9 @@ class SLMQRCodeController: UIViewController,
                            movePoint: CGPoint(x: leftSpacing + centerViewWith - 50, y: ScreenHeight/2 + centerViewWith/2),
                          centerPoint: CGPoint(x: leftSpacing + centerViewWith , y: ScreenHeight/2 + centerViewWith/2),
                             endPoint: CGPoint(x: leftSpacing + centerViewWith , y: ScreenHeight/2 + centerViewWith/2 - 50))
-    
+    self.redView = factory.createLineView()
+    view.addSubview(self.redView)
+    self.redView.frame = CGRect.init(x: leftSpacing, y: (ScreenHeight - centerViewWith)/2, width: centerViewWith, height: 2)
   }
   
   func initDevice(){
@@ -171,6 +180,18 @@ class SLMQRCodeController: UIViewController,
     picker.dismiss(animated: true, completion: {
       () -> Void in
     })
+  }
+  
+  //timer run
+  @objc func timerFired() -> Void {
+    self.minutes += 1
+    let redViewY = CGFloat(self.minutes)
+
+    if redViewY == (ScreenHeight - (ScreenWidth - 80 * 2))/2 - 4 {
+      self.minutes = 1
+    } else {
+      self.redView.frame = CGRect.init(x: 80, y: (ScreenHeight - (ScreenWidth - 80 * 2))/2 + redViewY, width:  (ScreenWidth - 80 * 2), height: 2)        
+    }
   }
   
   @objc func openLibrary() -> Void {

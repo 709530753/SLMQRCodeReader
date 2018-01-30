@@ -39,4 +39,14 @@ class SLMFactory: NSObject {
     self.createShapeLayer(context: context, path: path)
   }
   
+  func createLineView() -> UIView {
+    let view = UIView()
+    view.backgroundColor = UIColor.red
+    view.layer.shadowColor = UIColor.red.cgColor
+    view.layer.shadowOffset = CGSize(width: 0, height: -10)
+    view.layer.shadowOpacity = 1
+    view.layer.shadowRadius = 10
+    return view
+  }
+  
 }
