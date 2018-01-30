@@ -21,8 +21,9 @@ class ViewController: UIViewController {
     let qrCode = SLMQRCodeReader()
     qrCode.showQRReader(controller: self)
     qrCode.qrCodeContent = { content in
-      print("controller content : \(content)")
+      NSLog("content : %@", content)
     }
+    
   }
   
 }

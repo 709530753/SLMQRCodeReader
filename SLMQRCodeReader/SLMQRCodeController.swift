@@ -9,7 +9,10 @@
 import UIKit
 import AVFoundation
 
-class SLMQRCodeController: UIViewController,UINavigationControllerDelegate,AVCaptureMetadataOutputObjectsDelegate,UIImagePickerControllerDelegate {
+class SLMQRCodeController: UIViewController,
+             UINavigationControllerDelegate,
+     AVCaptureMetadataOutputObjectsDelegate,
+            UIImagePickerControllerDelegate {
 
   var slmQRContent: ((_ content: String) ->Void)?
 
@@ -32,12 +35,12 @@ class SLMQRCodeController: UIViewController,UINavigationControllerDelegate,AVCap
     
     let factory = SLMFactory()
     _ = factory.createBtn(context: self,
-                            frame: CGRect.init(x: 10, y: 10, width: 80, height: 40),
+                            frame: CGRect(x: 10, y: 10, width: 80, height: 40),
                             title: "cancel",
                            action:  #selector(back))
     
     _ = factory.createBtn(context: self,
-                            frame: CGRect.init(x: ScreenWidth - 100, y: 10, width: 80, height: 40),
+                            frame: CGRect(x: ScreenWidth - 100, y: 10, width: 80, height: 40),
                             title: "library",
                            action: #selector(openLibrary))
     
