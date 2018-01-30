@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9010C77F2020503000A327C7 /* SLMQRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904298BF201F140B00A9D035 /* SLMQRCodeReader.framework */; };
+		9010C7802020503000A327C7 /* SLMQRCodeReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 904298BF201F140B00A9D035 /* SLMQRCodeReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9042988C201ED3A900A9D035 /* SLMQRCodeReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 9042988A201ED3A900A9D035 /* SLMQRCodeReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		90429899201ED42800A9D035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90429898201ED42800A9D035 /* AppDelegate.swift */; };
 		9042989B201ED42800A9D035 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042989A201ED42800A9D035 /* ViewController.swift */; };
@@ -14,31 +16,19 @@
 		904298A0201ED42800A9D035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9042989F201ED42800A9D035 /* Assets.xcassets */; };
 		904298A3201ED42800A9D035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 904298A1201ED42800A9D035 /* LaunchScreen.storyboard */; };
 		904298AB201ED50900A9D035 /* SLMQRCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904298AA201ED50900A9D035 /* SLMQRCodeController.swift */; };
-		904298AC201ED90100A9D035 /* SLMQRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90429887201ED3A900A9D035 /* SLMQRCodeReader.framework */; };
-		904298AD201ED90100A9D035 /* SLMQRCodeReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90429887201ED3A900A9D035 /* SLMQRCodeReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		904298B2201EE06000A9D035 /* SLMQRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904298B1201EE06000A9D035 /* SLMQRCodeReader.swift */; };
 		904298C0201F140C00A9D035 /* SLMQRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904298BF201F140B00A9D035 /* SLMQRCodeReader.framework */; };
 		904298CB201F17F200A9D035 /* SLMFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904298CA201F17F200A9D035 /* SLMFactory.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		904298AE201ED90100A9D035 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9042987E201ED3A900A9D035 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 90429886201ED3A900A9D035;
-			remoteInfo = SLMQRCodeReader;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		904298B0201ED90100A9D035 /* Embed Frameworks */ = {
+		9010C7812020503000A327C7 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				904298AD201ED90100A9D035 /* SLMQRCodeReader.framework in Embed Frameworks */,
+				9010C7802020503000A327C7 /* SLMQRCodeReader.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				904298AC201ED90100A9D035 /* SLMQRCodeReader.framework in Frameworks */,
+				9010C77F2020503000A327C7 /* SLMQRCodeReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,12 +163,11 @@
 				90429892201ED42700A9D035 /* Sources */,
 				90429893201ED42700A9D035 /* Frameworks */,
 				90429894201ED42700A9D035 /* Resources */,
-				904298B0201ED90100A9D035 /* Embed Frameworks */,
+				9010C7812020503000A327C7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				904298AF201ED90100A9D035 /* PBXTargetDependency */,
 			);
 			name = SLMQRCodeReaderApp;
 			productName = SLMQRCodeReaderApp;
@@ -267,14 +256,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		904298AF201ED90100A9D035 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 90429886201ED3A900A9D035 /* SLMQRCodeReader */;
-			targetProxy = 904298AE201ED90100A9D035 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		9042989C201ED42800A9D035 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -347,6 +328,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-all_load";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -400,6 +382,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-all_load";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -460,13 +443,13 @@
 		904298A5201ED42800A9D035 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QWCLQXYG22;
 				INFOPLIST_FILE = SLMQRCodeReaderApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = FengXin.SLMQRCodeReaderApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -477,13 +460,13 @@
 		904298A6201ED42800A9D035 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QWCLQXYG22;
 				INFOPLIST_FILE = SLMQRCodeReaderApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = FengXin.SLMQRCodeReaderApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
