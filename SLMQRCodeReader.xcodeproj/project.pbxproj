@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9001A6292021643400229AA9 /* SLMQRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904298BF201F140B00A9D035 /* SLMQRCodeReader.framework */; };
-		9001A62A2021643400229AA9 /* SLMQRCodeReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 904298BF201F140B00A9D035 /* SLMQRCodeReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9001A62C2021645900229AA9 /* SLMQRCodeReader.h in Sources */ = {isa = PBXBuildFile; fileRef = 9042988A201ED3A900A9D035 /* SLMQRCodeReader.h */; };
 		9042988C201ED3A900A9D035 /* SLMQRCodeReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 9042988A201ED3A900A9D035 /* SLMQRCodeReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		90429899201ED42800A9D035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90429898201ED42800A9D035 /* AppDelegate.swift */; };
@@ -19,16 +17,30 @@
 		904298AB201ED50900A9D035 /* SLMQRCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904298AA201ED50900A9D035 /* SLMQRCodeController.swift */; };
 		904298B2201EE06000A9D035 /* SLMQRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904298B1201EE06000A9D035 /* SLMQRCodeReader.swift */; };
 		904298CB201F17F200A9D035 /* SLMFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904298CA201F17F200A9D035 /* SLMFactory.swift */; };
+		9086552A202AA5B000E6610F /* SLMQRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90429887201ED3A900A9D035 /* SLMQRCodeReader.framework */; };
+		9086552B202AA5B000E6610F /* SLMQRCodeReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90429887201ED3A900A9D035 /* SLMQRCodeReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		90865530202AA71700E6610F /* SLMHelps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086552F202AA71700E6610F /* SLMHelps.swift */; };
+		90865533202AC77200E6610F /* SLMQCode.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90865535202AC77200E6610F /* SLMQCode.strings */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9086552C202AA5B000E6610F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9042987E201ED3A900A9D035 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90429886201ED3A900A9D035;
+			remoteInfo = SLMQRCodeReader;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		9001A62B2021643400229AA9 /* Embed Frameworks */ = {
+		9086552E202AA5B000E6610F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9001A62A2021643400229AA9 /* SLMQRCodeReader.framework in Embed Frameworks */,
+				9086552B202AA5B000E6610F /* SLMQRCodeReader.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +62,9 @@
 		904298B1201EE06000A9D035 /* SLMQRCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLMQRCodeReader.swift; sourceTree = "<group>"; };
 		904298BF201F140B00A9D035 /* SLMQRCodeReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SLMQRCodeReader.framework; path = ../../../../Desktop/QRCodeReader.swift/Example/Carthage/Build/iOS/SLMQRCodeReader.framework; sourceTree = "<group>"; };
 		904298CA201F17F200A9D035 /* SLMFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLMFactory.swift; sourceTree = "<group>"; };
+		9086552F202AA71700E6610F /* SLMHelps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLMHelps.swift; sourceTree = "<group>"; };
+		90865534202AC77200E6610F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SLMQCode.strings; sourceTree = "<group>"; };
+		90865536202AC7A300E6610F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SLMQCode.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9001A6292021643400229AA9 /* SLMQRCodeReader.framework in Frameworks */,
+				9086552A202AA5B000E6610F /* SLMQRCodeReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +111,8 @@
 				904298B1201EE06000A9D035 /* SLMQRCodeReader.swift */,
 				904298CA201F17F200A9D035 /* SLMFactory.swift */,
 				904298AA201ED50900A9D035 /* SLMQRCodeController.swift */,
+				9086552F202AA71700E6610F /* SLMHelps.swift */,
+				90865535202AC77200E6610F /* SLMQCode.strings */,
 				9042988A201ED3A900A9D035 /* SLMQRCodeReader.h */,
 				9042988B201ED3A900A9D035 /* Info.plist */,
 			);
@@ -162,11 +179,12 @@
 				90429892201ED42700A9D035 /* Sources */,
 				90429893201ED42700A9D035 /* Frameworks */,
 				90429894201ED42700A9D035 /* Resources */,
-				9001A62B2021643400229AA9 /* Embed Frameworks */,
+				9086552E202AA5B000E6610F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9086552D202AA5B000E6610F /* PBXTargetDependency */,
 			);
 			name = SLMQRCodeReaderApp;
 			productName = SLMQRCodeReaderApp;
@@ -201,6 +219,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 9042987D201ED3A900A9D035;
 			productRefGroup = 90429888201ED3A900A9D035 /* Products */;
@@ -218,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90865533202AC77200E6610F /* SLMQCode.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90865530202AA71700E6610F /* SLMHelps.swift in Sources */,
 				9001A62C2021645900229AA9 /* SLMQRCodeReader.h in Sources */,
 				904298CB201F17F200A9D035 /* SLMFactory.swift in Sources */,
 				904298AB201ED50900A9D035 /* SLMQRCodeController.swift in Sources */,
@@ -256,6 +277,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9086552D202AA5B000E6610F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90429886201ED3A900A9D035 /* SLMQRCodeReader */;
+			targetProxy = 9086552C202AA5B000E6610F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		9042989C201ED42800A9D035 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -273,6 +302,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		90865535202AC77200E6610F /* SLMQCode.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90865534202AC77200E6610F /* en */,
+				90865536202AC7A300E6610F /* zh-Hans */,
+			);
+			name = SLMQCode.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -280,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -341,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -443,6 +483,7 @@
 		904298A5201ED42800A9D035 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QWCLQXYG22;
@@ -460,6 +501,7 @@
 		904298A6201ED42800A9D035 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QWCLQXYG22;

@@ -15,7 +15,11 @@ public class SLMQRCodeReader: NSObject {
   public func showQRReader(controller: UIViewController) ->Void {
     print("showQRReader")
     let qrController:SLMQRCodeController = SLMQRCodeController()
-    controller.present(qrController, animated: true, completion: nil)
+    if SLMHelps.Platform.isSimulator {
+      print("is simulator please use a device")
+    } else {
+      controller.present(qrController, animated: true, completion: nil)
+    }
     qrController.slmQRContent = { content in
       print("content : \(content)")
       self.qrCodeContent!(content)

@@ -43,7 +43,7 @@ class SLMQRCodeController: UIViewController,
     let factory = SLMFactory()
     _ = factory.createBtn(context: self,
                             frame: CGRect(x: 10, y: 10, width: 80, height: 40),
-                            title: "cancel",
+                            title: NSLocalizedString("slm_btn_cancel", comment: "default"),
                            action:  #selector(back))
     
     _ = factory.createBtn(context: self,
@@ -74,6 +74,7 @@ class SLMQRCodeController: UIViewController,
                             endPoint: CGPoint(x: leftSpacing + centerViewWith , y: ScreenHeight/2 + centerViewWith/2 - 50))
     self.redView = factory.createLineView()
     view.addSubview(self.redView)
+    
     self.redView.frame = CGRect.init(x: leftSpacing, y: (ScreenHeight - centerViewWith)/2, width: centerViewWith, height: 2)
   }
   
@@ -82,7 +83,12 @@ class SLMQRCodeController: UIViewController,
     self.device = AVCaptureDevice.default(for: AVMediaType.video)
     // Input
     do {
-      self.input = try AVCaptureDeviceInput(device: self.device)
+      let isSim = SLMHelps.Platform.isSimulator
+      if isSim {
+        
+      } else {
+        self.input = try AVCaptureDeviceInput(device: self.device)
+      }
     } catch {
       print("Input 初始化失败")
       return
@@ -216,7 +222,14 @@ class SLMQRCodeController: UIViewController,
   }
   
   @objc func back() -> Void {
+    timer?.invalidate()
+    timer = nil
     dismiss(animated: true, completion: nil)
+  }
+  
+  deinit {
+      timer?.invalidate()
+    timer = nil
   }
   
 }
