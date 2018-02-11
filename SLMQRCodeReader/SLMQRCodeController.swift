@@ -186,6 +186,7 @@ class SLMQRCodeController: UIViewController,
     picker.dismiss(animated: true, completion: {
       () -> Void in
     })
+    self.back();
   }
   
   //timer run
