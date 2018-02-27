@@ -20,7 +20,8 @@
 		9086552A202AA5B000E6610F /* SLMQRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90429887201ED3A900A9D035 /* SLMQRCodeReader.framework */; };
 		9086552B202AA5B000E6610F /* SLMQRCodeReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90429887201ED3A900A9D035 /* SLMQRCodeReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		90865530202AA71700E6610F /* SLMHelps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086552F202AA71700E6610F /* SLMHelps.swift */; };
-		90865533202AC77200E6610F /* SLMQCode.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90865535202AC77200E6610F /* SLMQCode.strings */; };
+		90865533202AC77200E6610F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90865535202AC77200E6610F /* Localizable.strings */; };
+		909E726C20453C6A006484F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90865535202AC77200E6610F /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +64,8 @@
 		904298BF201F140B00A9D035 /* SLMQRCodeReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SLMQRCodeReader.framework; path = ../../../../Desktop/QRCodeReader.swift/Example/Carthage/Build/iOS/SLMQRCodeReader.framework; sourceTree = "<group>"; };
 		904298CA201F17F200A9D035 /* SLMFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLMFactory.swift; sourceTree = "<group>"; };
 		9086552F202AA71700E6610F /* SLMHelps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLMHelps.swift; sourceTree = "<group>"; };
-		90865534202AC77200E6610F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SLMQCode.strings; sourceTree = "<group>"; };
-		90865536202AC7A300E6610F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SLMQCode.strings"; sourceTree = "<group>"; };
+		90865534202AC77200E6610F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		90865536202AC7A300E6610F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +113,7 @@
 				904298CA201F17F200A9D035 /* SLMFactory.swift */,
 				904298AA201ED50900A9D035 /* SLMQRCodeController.swift */,
 				9086552F202AA71700E6610F /* SLMHelps.swift */,
-				90865535202AC77200E6610F /* SLMQCode.strings */,
+				90865535202AC77200E6610F /* Localizable.strings */,
 				9042988A201ED3A900A9D035 /* SLMQRCodeReader.h */,
 				9042988B201ED3A900A9D035 /* Info.plist */,
 			);
@@ -237,7 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90865533202AC77200E6610F /* SLMQCode.strings in Resources */,
+				90865533202AC77200E6610F /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				904298A3201ED42800A9D035 /* LaunchScreen.storyboard in Resources */,
+				909E726C20453C6A006484F6 /* Localizable.strings in Resources */,
 				904298A0201ED42800A9D035 /* Assets.xcassets in Resources */,
 				9042989E201ED42800A9D035 /* Main.storyboard in Resources */,
 			);
@@ -302,13 +304,13 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		90865535202AC77200E6610F /* SLMQCode.strings */ = {
+		90865535202AC77200E6610F /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				90865534202AC77200E6610F /* en */,
 				90865536202AC7A300E6610F /* zh-Hans */,
 			);
-			name = SLMQCode.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

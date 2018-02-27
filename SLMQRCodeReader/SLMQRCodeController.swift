@@ -42,13 +42,13 @@ class SLMQRCodeController: UIViewController,
     
     let factory = SLMFactory()
     _ = factory.createBtn(context: self,
-                            frame: CGRect(x: 10, y: 10, width: 80, height: 40),
-                            title: NSLocalizedString("slm_btn_cancel", comment: "default"),
+                            frame: CGRect(x: 10, y: 15, width: 80, height: 40),
+                            title: NSLocalizedString("Common_Cancel", comment: "Cancel"),
                            action:  #selector(back))
     
     _ = factory.createBtn(context: self,
-                            frame: CGRect(x: ScreenWidth - 100, y: 10, width: 80, height: 40),
-                            title: "library",
+                            frame: CGRect(x: ScreenWidth - 80, y: 15, width: 80, height: 40),
+                            title: NSLocalizedString("Common_Library", comment: "Library"),
                            action: #selector(openLibrary))
     
     let leftSpacing:CGFloat = 80.0;
