@@ -173,6 +173,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if __has_feature(modules)
 @import ObjectiveC;
+@import UIKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -189,6 +190,8 @@ SWIFT_CLASS("_TtC15SLMQRCodeReader15SLMQRCodeReader")
 @interface SLMQRCodeReader : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
 
 SWIFT_MODULE_NAMESPACE_POP
 #pragma clang diagnostic pop
