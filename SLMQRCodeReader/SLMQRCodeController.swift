@@ -18,6 +18,8 @@ class SLMQRCodeController: UIViewController,
   var timer:Timer?
   var minutes:Int = 1;
   var redView:UIView!
+  var activityIndicatorView = UIActivityIndicatorView()
+  
   
   
   private var device: AVCaptureDevice!
@@ -76,6 +78,8 @@ class SLMQRCodeController: UIViewController,
     view.addSubview(self.redView)
     
     self.redView.frame = CGRect.init(x: leftSpacing, y: (ScreenHeight - centerViewWith)/2, width: centerViewWith, height: 2)
+    activityIndicatorView.frame = CGRect(x:ScreenWidth/2 - 10,y:ScreenHeight/2 - 10,width:20,height:20)
+    view.addSubview(activityIndicatorView)
   }
   
   func initDevice(){
@@ -148,29 +152,6 @@ class SLMQRCodeController: UIViewController,
     }
   }
   
-  //识别二维码图片
-  func readImage(image:UIImage) -> Void {
-    let ciImage:CIImage=CIImage(image:image)!
-    
-    let context = CIContext(options: nil)
-    let detector = CIDetector(ofType: CIDetectorTypeQRCode, context: context,
-                              options: [CIDetectorAccuracy:CIDetectorAccuracyHigh])
-    
-    let features = detector?.features(in: ciImage)
-    
-    print("扫描到二维码个数：\(features?.count ?? 0)")
-    //遍历所有的二维码，并框出
-    for feature in features as! [CIQRCodeFeature] {
-      print("message : \(feature.messageString!)")
-    }
-    if features?.count != 0 {
-      let qrContent = features![0] as! CIQRCodeFeature
-      slmQRContent!(qrContent.messageString!)
-    }
-
-    self.back()
-  }
-  
   //选择图片成功后代理
   func imagePickerController(_ picker: UIImagePickerController,
                              didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -181,7 +162,17 @@ class SLMQRCodeController: UIViewController,
     let image:UIImage!
       image = info[UIImagePickerControllerOriginalImage] as! UIImage
     print("image : \(image!)")
-    self.readImage(image: image!)
+    self.activityIndicatorView.startAnimating()
+    DispatchQueue.global().async {
+      let qrContent = image.recognizeQRCode()
+      let result = qrContent.characters.count > 0 ? qrContent : ""
+      DispatchQueue.main.async {
+        self.activityIndicatorView.stopAnimating()
+        self.slmQRContent!(result)
+      }
+    }
+
+    self.back()
     //图片控制器退出
     picker.dismiss(animated: true, completion: {
       () -> Void in
@@ -210,6 +201,7 @@ class SLMQRCodeController: UIViewController,
       picker.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
       //指定图片控制器类型
       picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+      picker.allowsEditing = true
       //设置是否允许编辑
 //      picker.allowsEditing = editSwitch.isOn
       //弹出控制器，显示界面
@@ -229,7 +221,7 @@ class SLMQRCodeController: UIViewController,
   }
   
   deinit {
-      timer?.invalidate()
+    timer?.invalidate()
     timer = nil
   }
   

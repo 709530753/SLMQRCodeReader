@@ -17,6 +17,7 @@
 		904298AB201ED50900A9D035 /* SLMQRCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904298AA201ED50900A9D035 /* SLMQRCodeController.swift */; };
 		904298B2201EE06000A9D035 /* SLMQRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904298B1201EE06000A9D035 /* SLMQRCodeReader.swift */; };
 		904298CB201F17F200A9D035 /* SLMFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904298CA201F17F200A9D035 /* SLMFactory.swift */; };
+		905DC7472047D29C0045030F /* UIImage+QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905DC7462047D29C0045030F /* UIImage+QRCode.swift */; };
 		9086552A202AA5B000E6610F /* SLMQRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90429887201ED3A900A9D035 /* SLMQRCodeReader.framework */; };
 		9086552B202AA5B000E6610F /* SLMQRCodeReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90429887201ED3A900A9D035 /* SLMQRCodeReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		90865530202AA71700E6610F /* SLMHelps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086552F202AA71700E6610F /* SLMHelps.swift */; };
@@ -63,6 +64,7 @@
 		904298B1201EE06000A9D035 /* SLMQRCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLMQRCodeReader.swift; sourceTree = "<group>"; };
 		904298BF201F140B00A9D035 /* SLMQRCodeReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SLMQRCodeReader.framework; path = ../../../../Desktop/QRCodeReader.swift/Example/Carthage/Build/iOS/SLMQRCodeReader.framework; sourceTree = "<group>"; };
 		904298CA201F17F200A9D035 /* SLMFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLMFactory.swift; sourceTree = "<group>"; };
+		905DC7462047D29C0045030F /* UIImage+QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+QRCode.swift"; sourceTree = "<group>"; };
 		9086552F202AA71700E6610F /* SLMHelps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLMHelps.swift; sourceTree = "<group>"; };
 		90865534202AC77200E6610F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		90865536202AC7A300E6610F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -109,10 +111,11 @@
 		90429889201ED3A900A9D035 /* SLMQRCodeReader */ = {
 			isa = PBXGroup;
 			children = (
+				905DC7482047D5A70045030F /* Extension */,
+				905DC7492047D5B60045030F /* Factory */,
+				905DC74A2047D5D20045030F /* Helpers */,
 				904298B1201EE06000A9D035 /* SLMQRCodeReader.swift */,
-				904298CA201F17F200A9D035 /* SLMFactory.swift */,
 				904298AA201ED50900A9D035 /* SLMQRCodeController.swift */,
-				9086552F202AA71700E6610F /* SLMHelps.swift */,
 				90865535202AC77200E6610F /* Localizable.strings */,
 				9042988A201ED3A900A9D035 /* SLMQRCodeReader.h */,
 				9042988B201ED3A900A9D035 /* Info.plist */,
@@ -139,6 +142,30 @@
 				904298BF201F140B00A9D035 /* SLMQRCodeReader.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		905DC7482047D5A70045030F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				905DC7462047D29C0045030F /* UIImage+QRCode.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		905DC7492047D5B60045030F /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				904298CA201F17F200A9D035 /* SLMFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		905DC74A2047D5D20045030F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9086552F202AA71700E6610F /* SLMHelps.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90865530202AA71700E6610F /* SLMHelps.swift in Sources */,
+				905DC7472047D29C0045030F /* UIImage+QRCode.swift in Sources */,
 				9001A62C2021645900229AA9 /* SLMQRCodeReader.h in Sources */,
 				904298CB201F17F200A9D035 /* SLMFactory.swift in Sources */,
 				904298AB201ED50900A9D035 /* SLMQRCodeController.swift in Sources */,
