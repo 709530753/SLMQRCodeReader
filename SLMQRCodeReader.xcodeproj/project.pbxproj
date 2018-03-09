@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		526EED792052C51A0092C0C5 /* SLMQRManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 526EED782052C51A0092C0C5 /* SLMQRManager.m */; };
 		9001A62C2021645900229AA9 /* SLMQRCodeReader.h in Sources */ = {isa = PBXBuildFile; fileRef = 9042988A201ED3A900A9D035 /* SLMQRCodeReader.h */; };
 		9042988C201ED3A900A9D035 /* SLMQRCodeReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 9042988A201ED3A900A9D035 /* SLMQRCodeReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		90429899201ED42800A9D035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90429898201ED42800A9D035 /* AppDelegate.swift */; };
@@ -50,6 +51,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		526EED762052C51A0092C0C5 /* SLMQRCodeReaderApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SLMQRCodeReaderApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		526EED772052C51A0092C0C5 /* SLMQRManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLMQRManager.h; sourceTree = "<group>"; };
+		526EED782052C51A0092C0C5 /* SLMQRManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLMQRManager.m; sourceTree = "<group>"; };
 		90429887201ED3A900A9D035 /* SLMQRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SLMQRCodeReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9042988A201ED3A900A9D035 /* SLMQRCodeReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLMQRCodeReader.h; sourceTree = "<group>"; };
 		9042988B201ED3A900A9D035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,10 +132,13 @@
 			children = (
 				90429898201ED42800A9D035 /* AppDelegate.swift */,
 				9042989A201ED42800A9D035 /* ViewController.swift */,
+				526EED772052C51A0092C0C5 /* SLMQRManager.h */,
+				526EED782052C51A0092C0C5 /* SLMQRManager.m */,
 				9042989C201ED42800A9D035 /* Main.storyboard */,
 				9042989F201ED42800A9D035 /* Assets.xcassets */,
 				904298A1201ED42800A9D035 /* LaunchScreen.storyboard */,
 				904298A4201ED42800A9D035 /* Info.plist */,
+				526EED762052C51A0092C0C5 /* SLMQRCodeReaderApp-Bridging-Header.h */,
 			);
 			path = SLMQRCodeReaderApp;
 			sourceTree = "<group>";
@@ -236,6 +243,7 @@
 					};
 					90429895201ED42700A9D035 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -301,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9042989B201ED42800A9D035 /* ViewController.swift in Sources */,
+				526EED792052C51A0092C0C5 /* SLMQRManager.m in Sources */,
 				90429899201ED42800A9D035 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,7 +524,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QWCLQXYG22;
 				INFOPLIST_FILE = SLMQRCodeReaderApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -523,6 +534,8 @@
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = FengXin.SLMQRCodeReaderApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SLMQRCodeReaderApp/SLMQRCodeReaderApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -533,7 +546,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QWCLQXYG22;
 				INFOPLIST_FILE = SLMQRCodeReaderApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -541,6 +556,7 @@
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = FengXin.SLMQRCodeReaderApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SLMQRCodeReaderApp/SLMQRCodeReaderApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

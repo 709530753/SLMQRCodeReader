@@ -10,8 +10,10 @@ import UIKit
 
 public class SLMQRCodeReader: NSObject {
   
+  @objc
   public var qrCodeContent:((_ content:String) ->Void)?
 
+  @objc
   public func showQRReader(controller: UIViewController) ->Void {
     print("showQRReader")
     let qrController:SLMQRCodeController = SLMQRCodeController()

@@ -18,13 +18,13 @@ class ViewController: UIViewController {
   }
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    let qrCode = SLMQRCodeReader()
-    qrCode.showQRReader(controller: self)
-    qrCode.qrCodeContent = { content in
-      NSLog("content : %@", content)
-      self.content.text = content
-    }
-    
+//    let qrCode = SLMQRCodeReader()
+//    qrCode.showQRReader(controller: self)
+//    qrCode.qrCodeContent = { content in
+//      NSLog("content : %@", content)
+//      self.content.text = content
+//    }
+//    
   }
   
 }
